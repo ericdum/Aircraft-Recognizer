@@ -1,0 +1,17 @@
+{
+  "name": "aircraft",
+  "version": "1.0.0",
+  "description": "recognize aircrafts",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=html mocha --recursive tests --timeout 20000",
+    "test-w": "mocha -w --recursive tests --timeout 20000"
+  },
+  "author": "木酱 <formateric@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "expect": "^26.1.0",
+    "mocha": "^8.0.1",
+    "nyc": "^15.1.0"
+  }
+}
