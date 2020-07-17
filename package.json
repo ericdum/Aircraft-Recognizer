@@ -1,6 +1,6 @@
 {
   "name": "aircraft-recognizer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "recognize aircrafts",
   "main": "index.js",
   "scripts": {
@@ -18,5 +18,9 @@
     "expect": "^26.1.0",
     "mocha": "^8.0.1",
     "nyc": "^15.1.0"
+  },
+  "dependencies": {
+    "csv-parser": "^2.3.3",
+    "ready": "^0.1.1"
   }
 }

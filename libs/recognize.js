@@ -1,4 +1,7 @@
-module.exports = function(aircraftName){
+const ACRes = require('../resources');
+
+module.exports = async function(aircraftName){
+  await ACRes.init();
   var abbr;
   abbr = matchBoeing(aircraftName) 
   if(abbr) return {
@@ -79,6 +82,9 @@ function matchBoeing(name){
 
   var matches = name.match(/(747).*SR$/)
   if (matches) return 'B74R';
+
+  var matches = name.match(/(777).*ER$/)
+  if (matches) return 'B77E';
 
   var matches = name.match(/MAX ?(\d)$/)
   if (matches) return 'B3' + matches[1] + 'M';
