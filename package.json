@@ -7,7 +7,7 @@
     "test": "nyc --reporter=html mocha --recursive tests --timeout 20000",
     "test-w": "mocha -w --recursive tests --timeout 20000"
   },
-  "author": "木酱 <formateric@gmail.com>",
+  "author": "木酱 (Eric Mujiang) <formateric@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "expect": "^26.1.0",

@@ -1,20 +1,68 @@
 module.exports = function(aircraftName){
   var abbr;
   abbr = matchBoeing(aircraftName) 
-  if(abbr) return abbr
+  if(abbr) return {
+    manufacturer: 'Boeing',
+    abbr: abbr,
+    family: abbr.substr(0,3)+'7'
+  }
   abbr = matchAirbus(aircraftName) 
-  if(abbr) return abbr
+  if(abbr) return {
+    manufacturer: 'Airbus',
+    abbr: abbr,
+    family: getAirbusFamily(abbr)
+  }
   abbr = matchAntonov(aircraftName) 
-  if(abbr) return abbr
+  if(abbr) return {
+    manufacturer: 'Antonov',
+    abbr: abbr,
+    family: abbr
+  }
   abbr = matchTupolev(aircraftName) 
-  if(abbr) return abbr
+  if(abbr) return {
+    manufacturer: 'Tuopolev',
+    abbr: abbr,
+    family: abbr
+  }
   abbr = matchIlyushin(aircraftName) 
-  if(abbr) return abbr
+  if(abbr) return {
+    manufacturer: 'Ilyushin',
+    abbr: abbr,
+    family: abbr
+  }
   abbr = matchERJ(aircraftName) 
-  if(abbr) return abbr
+  if(abbr) return {
+    manufacturer: 'Embraer',
+    abbr: abbr,
+    family: abbr
+  }
   abbr = matchCRJ(aircraftName) 
-  if(abbr) return abbr
-  return aircraftName
+  if(abbr) return {
+    manufacturer: 'Bombardier',
+    abbr: abbr,
+    family: abbr
+  }
+  abbr = matchMD(aircraftName) 
+  if(abbr) return {
+    manufacturer: 'Boeing (McDonnell Douglas)',
+    abbr: abbr,
+    family:abbr 
+  }
+  abbr = matchComac(aircraftName) 
+  if(abbr) return {
+    manufacturer: 'Comac',
+    abbr: abbr,
+    family: "ARJ21"
+  }
+  console.error('unmatch', aircraftName)
+  return {
+    abbr: aircraftName
+  }
+}
+
+function getAirbusFamily(abbr) {
+  if (abbr.match(/318|319|20n|21N|19N|18N/)) return 'A320'
+  else return abbr.substr(0,3)+'0'
 }
 
 function matchBoeing(name){
@@ -85,12 +133,12 @@ function matchAntonov(name) {
 }
 
 function matchTupolev(name) {
-  var matches = name.match(/TU-(\d+)$/)
+  var matches = name.match(/TU?u?-?(\d+)$/)
   if (matches) return 'T'+matches[1];
 }
 
 function matchIlyushin(name) {
-  var matches = name.match(/IL.*-(\d+)$/)
+  var matches = name.match(/IL-?(\d+)$/)
   if (matches) return 'IL'+matches[1];
 }
 
@@ -102,4 +150,18 @@ function matchERJ(name) {
 function matchCRJ(name) {
   var matches = name.match(/CRJ.*?(\d)00/)
   if (matches) return 'CRJ'+matches[1];
+  var matches = name.match(/CRJ/)
+  if (matches) return 'CRJ';
+}
+
+function matchComac(name) {
+  var matches = name.match(/ARJ21-?(\d)/)
+  if (matches) return 'AJ2'+matches[1]||'1';
+  var matches = name.match(/C-?919/)
+  if (matches) return 'C919';
+}
+
+function matchMD(name) {
+  var matches = name.match(/MD-?(\d*)/)
+  if (matches) return 'MD'+matches[1];
 }
