@@ -1,5 +1,5 @@
 {
-  "name": "aircraft",
+  "name": "aircraft-recognizer",
   "version": "1.0.0",
   "description": "recognize aircrafts",
   "main": "index.js",
@@ -8,6 +8,11 @@
     "test-w": "mocha -w --recursive tests --timeout 20000"
   },
   "author": "木酱 (Eric Mujiang) <formateric@gmail.com>",
+  "homepage": "https://github.com/ericdum/aircraft-recognizer",
+  "repostitory": {
+    "type": "git",
+    "url": "https://github.com/ericdum/aircraft-recognizer"
+  },
   "license": "ISC",
   "devDependencies": {
     "expect": "^26.1.0",
