@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/ericdum/aircraft-recognizer.svg?branch=master)](https://travis-ci.org/ericdum/aircraft-recognizer)
+### Aircraft Recognizer [![Build Status](https://travis-ci.org/ericdum/aircraft-recognizer.svg?branch=master)](https://travis-ci.org/ericdum/aircraft-recognizer)
 
 ### Background
 When I first entered the aviation industry, I found that people used the name of aircraft indiscriminately.
