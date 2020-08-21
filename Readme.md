@@ -6,7 +6,9 @@ So I created this project to collect all the aircraft family names, model names,
 This is a very started project and I need more data and more idea. Any tiny help will be welcome.
 
 ### Usage
-`
+
+```javascript
+
 // init recognizer
 const acr = require('aircraft-recognizer');
 
@@ -21,4 +23,4 @@ var aircraft = acr.recognize(aircraftName);
      "family": "A320"
    }
 */
-`
+```
