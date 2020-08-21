@@ -1,6 +1,6 @@
 {
-  "name": "Aircraft Recognizer",
-  "version": "1.0.6",
+  "name": "aircraft-recognizer",
+  "version": "1.0.5",
   "description": "recognize aircrafts",
   "main": "index.js",
   "scripts": {
@@ -9,10 +9,10 @@
     "coverage": "nyc npm test"
   },
   "author": "木酱 (Eric Mujiang) <formateric@gmail.com>",
-  "homepage": "https://github.com/ericdum/Aircraft-Recognizer",
+  "homepage": "https://github.com/ericdum/aircraft-recognizer",
   "repostitory": {
     "type": "git",
-    "url": "https://github.com/ericdum/Aircraft-Recognizer"
+    "url": "https://github.com/ericdum/aircraft-recognizer"
   },
   "license": "ISC",
   "devDependencies": {
