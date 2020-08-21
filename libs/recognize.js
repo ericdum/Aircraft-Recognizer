@@ -64,7 +64,7 @@ module.exports = async function(aircraftName){
 }
 
 function getAirbusFamily(abbr) {
-  if (abbr.match(/318|319|20n|21N|19N|18N/)) return 'A320'
+  if (abbr.match(/318|319|20N|21N|19N|18N/)) return 'A320'
   else return abbr.substr(0,3)+'0'
 }
 

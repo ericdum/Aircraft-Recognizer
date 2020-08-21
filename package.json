@@ -1,6 +1,6 @@
 {
   "name": "aircraft-recognizer",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "recognize aircrafts",
   "main": "index.js",
   "scripts": {
