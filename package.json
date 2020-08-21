@@ -4,8 +4,9 @@
   "description": "recognize aircrafts",
   "main": "index.js",
   "scripts": {
-    "test": "nyc --reporter=html mocha --recursive tests --timeout 20000",
-    "test-w": "mocha -w --recursive tests --timeout 20000"
+    "test": "mocha --recursive tests --timeout 20000",
+    "test-w": "mocha -w --recursive tests --timeout 20000",
+    "coverage": "nyc npm test"
   },
   "author": "木酱 (Eric Mujiang) <formateric@gmail.com>",
   "homepage": "https://github.com/ericdum/aircraft-recognizer",
