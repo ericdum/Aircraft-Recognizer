@@ -1,7 +1,6 @@
 const ACRes = require('../resources');
 
-module.exports = async function(aircraftName){
-  await ACRes.init();
+module.exports = function(aircraftName){
   var abbr;
   abbr = matchBoeing(aircraftName) 
   if(abbr) return {
